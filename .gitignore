@@ -8,3 +8,6 @@ model_files/*
 
 # cache
 */__pycache__
+
+# vscode
+.vscode
