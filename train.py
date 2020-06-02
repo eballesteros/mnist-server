@@ -61,15 +61,13 @@ def main():
 
     # train
     model.compile(optimizer='adam', 
-              loss='sparse_categorical_crossentropy',
-              metrics=['accuracy'])
+                  loss='sparse_categorical_crossentropy',
+                  metrics=['accuracy'])
 
     model.fit(train_ds, validation_data=test_ds, epochs=EPOCHS)
 
     # save
     save_model(model, os.path.join(os.path.dirname(os.path.realpath(__file__)), MODELS_REL_DIR, str(VERSION)))
-
-
 
 if __name__ == '__main__':
     main()
