@@ -1,2 +1,10 @@
+# model files
 model_files/*
 !model_files/.gitkeep
+
+# notenooks
+*.ipynb
+.ipynb_checkpoints
+
+# cache
+*/__pycache__
