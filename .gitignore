@@ -5,6 +5,7 @@ model_files/*
 # notenooks
 *.ipynb
 .ipynb_checkpoints
+!client.ipynb
 
 # cache
 */__pycache__
