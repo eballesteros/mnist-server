@@ -22,6 +22,6 @@ We'll also use docker-compose to seamlessly bring up the server, the client, and
 docker-compose up
 ```
 
-Once the boot-up finishes, you should have a jupyter notebook that will act as a client running on `http://localhost:8888/notebooks/mnist-server/client.ipynb`. Use token `letmein` to access.
+Once the boot-up finishes, you should have a jupyter notebook that will act as a client running on http://localhost:8888/notebooks/mnist-server/client.ipynb. Use token `letmein` to access.
 
 *Note*: The first time you run it, it may take some time to pull the images.
