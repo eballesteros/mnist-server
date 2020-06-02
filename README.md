@@ -16,7 +16,7 @@ docker run -v /path/to/mnist-server:/app tensorflow/tensorflow:2.1.0-py3 python 
 
 We are going to use TensorFlow Serving instead of building the typical flask backend. This allows for easy implementation of a high performance backend, supporting for example gRPC and mini-batching.
 
-We'll also use docker-compose to seamlessly bring up the server and the client and stablish the connections between them. To start both services, navigate to `path/to/mnist-server` and run:
+We'll also use docker-compose to seamlessly bring up the server, the client, and stablish the connections between them. To start both services, navigate to `path/to/mnist-server` and run:
 
 ```bash
 docker-compose up
