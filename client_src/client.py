@@ -21,7 +21,7 @@ def mnist_request(im):
     json_response = requests.post(f'{SERVER_ADDRESS}/v{MODEL_VERSION}/models/mnist:predict',
                                   data=data,
                                   headers=HEADERS)
-                                  
+
     prediction =  np.argmax(np.array(json.loads(json_response.text)['predictions']), axis=1)
     
     if single_image:
