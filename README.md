@@ -14,7 +14,7 @@ docker-compose -f train-compose.yml up
 
 This instruction will run train.py in a tensorflow docker container, train the model and save it into `./model_files/1`.
 
-*Note1:* The first time you run it, it may take some time to pull the docker image. After that it should be reasonably fast.
+*Note:* The first time you run it, it may take some time to pull the docker image. After that it should be reasonably fast.
 
 ## Deployment
 
