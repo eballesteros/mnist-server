@@ -1,0 +1,4 @@
+max_batch_size { value: 1000000 } # infinity
+batch_timeout_micros { value: 0 }
+num_batch_threads { value: 8 } # n cpu cores in my machine
+max_enqueued_batches { value: 1000000 } # infinity

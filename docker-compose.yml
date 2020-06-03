@@ -5,10 +5,14 @@ services:
     image: tensorflow/serving:2.1.0
     ports:
         - 8501:8501
-    environment: 
-        - MODEL_NAME=mnist
     volumes: 
         - ./model_files:/models/mnist
+        - ./server_src/config:/config
+    command:
+        - --model_config_file=/config/model.config
+        - --model_config_file_poll_wait_seconds=60
+        - --enable_batching=true
+        - --batching_parameters_file=/config/batching_parameters.txt
 
   client:
     image: tensorflow/tensorflow:2.1.0-py3-jupyter
