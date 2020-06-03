@@ -9,14 +9,12 @@ Throughout this repo, it will be assumed that you have Docker installed. If you 
 We are going to train a simple model with just 1 convolutional and 1 fully-connected layers. To do so, once you've cloned the repo, you can simply run:
 
 ```bash
-docker run -v /path/to/mnist-server:/app tensorflow/tensorflow:2.1.0-py3 python /app/train.py
+docker-compose -f train-compose.yml up
 ```
 
 This instruction will run train.py in a tensorflow docker container, train the model and save it into `./model_files/1`.
 
 *Note1:* The first time you run it, it may take some time to pull the docker image. After that it should be reasonably fast.
-
-*Note2:* If you have a GPU available, you can use the `tensorflow/tensorflow:2.1.0-gpu-py3` image instead. You will need to add `--runtime=nvidia` or `--gpus all` to you `docker run` command, depending on your Docker version (Check <https://www.tensorflow.org/install/docker#tensorflow_docker_requirements)>
 
 ## Deployment
 
