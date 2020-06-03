@@ -12,7 +12,7 @@ We are going to train a simple model with just 1 convolutional and 1 fully-conne
 docker run -v /path/to/mnist-server:/app tensorflow/tensorflow:2.1.0-py3 python /app/train.py
 ```
 
-This instruction will run train.py in a tensorflow docker container, train the model and save it into `./model_files/1`. With this simple architecture we can get over 97% accuracy on the validation set.
+This instruction will run train.py in a tensorflow docker container, train the model and save it into `./model_files/1`.
 
 *Note1:* The first time you run it, it may take some time to pull the docker image. After that it should be reasonably fast.
 
@@ -21,6 +21,8 @@ This instruction will run train.py in a tensorflow docker container, train the m
 ## Deployment
 
 Now lets deploy the model: We are going to use TensorFlow Serving instead of building the typical Flask backend. This allows for easy implementation of a high performance backend, supporting for example gRPC and mini-batching.
+
+You can check (and modify) some server configuration parameters in `server_src/config`. Batch related parameters are very model/application/system dependent. You can check [this guide](https://github.com/tensorflow/serving/tree/master/tensorflow_serving/batching#batch-scheduling-parameters-and-tuning) to better understand how to tune them.
 
 We'll also use docker-compose to seamlessly bring up the server, the client, and establish the connections between them. To start both services, navigate to `path/to/mnist-server` and run:
 
