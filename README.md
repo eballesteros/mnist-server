@@ -27,7 +27,7 @@ You can check (and modify) some server configuration parameters in `server_src/c
 We'll also use docker-compose to seamlessly bring up the server, the client, and establish the connections between them. To start both services, navigate to `path/to/mnist-server` and run:
 
 ```bash
-docker-compose up
+docker-compose -f client-server-compose.yml up
 ```
 
 Once the boot up finishes, you should have a jupyter notebook that will act as a client running on your machines <localhost:8888/notebooks/mnist-server/client.ipynb> Use token `letmein` to access.
