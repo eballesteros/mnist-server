@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+
+  train-server:
+    image: tensorflow/tensorflow:2.1.0-py3
+    volumes: 
+        - ./:/app
+    entrypoint: ["python", "/app/train.py"]
