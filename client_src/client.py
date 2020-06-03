@@ -7,11 +7,17 @@ HEADERS = {"content-type": "application/json"}
 SERVER_ADDRESS = 'http://server:8501'
 MODEL_VERSION = 1
 
+def preprocess(im):
+    '''
+    Normalize and add "color" channel
+    '''
+    return  np.expand_dims(im / 255, -1)
+    
 def mnist_request(im):
     '''
     '''
-    instance = np.expand_dims(im, -1) #add 'color' dim
-    
+    instance = preprocess(im)
+
     single_image = False
     if instance.ndim == 3:
         single_image = True
