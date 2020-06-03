@@ -12,7 +12,7 @@ We are going to train a simple model with just 1 convolutional and 1 fully-conne
 docker-compose -f train-compose.yml up
 ```
 
-This instruction will start a tensorflow docker container and run train.py, training the model and saving it into `./model_files/1`.
+This instruction will start a tensorflow docker container and run train.py, training the model and saving it into `./model_files/1`. With this simple architecture we can get over 96% accuracy on the validation set.
 
 *Note:* The first time you run it, it may take some time to pull the docker image. After that it should be reasonably fast.
 
